@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="转载
+
+https://blog.csdn.net/zhangqk2016/article/details/51849535
+
+多态是面向对象的一个基本属性，包括静态多态（编译阶段）和动态多态（运行阶段），静态多态主要是指函数参数不同产生的多态性，是在编译阶段可以识别的一种多态机制，而运行时多态则主">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>析构函数为虚函数 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="转载  https://blog.csdn.net/zhangqk2016/article/details/51849535  多态是面向对象的一个基本属性，包括静态多态（编译阶段）和动态多态（运行阶段），静态多态主要是指函数参数不同产生的多态性，是在编译阶段可以识别的一种多态机制，而运行时多态则主要用于基类指针指向派生类对象时，可以通过基类指针直接调用派生类的对象函数，当然这种多态是通过虚函数实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="析构函数为虚函数">
+<meta property="og:url" content="http://yoursite.com/2019/08/12/析构函数为虚函数/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="转载  https://blog.csdn.net/zhangqk2016/article/details/51849535  多态是面向对象的一个基本属性，包括静态多态（编译阶段）和动态多态（运行阶段），静态多态主要是指函数参数不同产生的多态性，是在编译阶段可以识别的一种多态机制，而运行时多态则主要用于基类指针指向派生类对象时，可以通过基类指针直接调用派生类的对象函数，当然这种多态是通过虚函数实">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-12T02:28:35.532Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="析构函数为虚函数">
+<meta name="twitter:description" content="转载  https://blog.csdn.net/zhangqk2016/article/details/51849535  多态是面向对象的一个基本属性，包括静态多态（编译阶段）和动态多态（运行阶段），静态多态主要是指函数参数不同产生的多态性，是在编译阶段可以识别的一种多态机制，而运行时多态则主要用于基类指针指向派生类对象时，可以通过基类指针直接调用派生类的对象函数，当然这种多态是通过虚函数实">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-析构函数为虚函数" class="post-析构函数为虚函数 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      析构函数为虚函数
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/08/12/析构函数为虚函数/" data-id="cjz7s41sw0002rrloqg8iwu3g" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>转载</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/zhangqk2016/article/details/51849535" target="_blank" rel="noopener">https://blog.csdn.net/zhangqk2016/article/details/51849535</a></p>
+</blockquote>
+<p>多态是面向对象的一个基本属性，包括静态多态（编译阶段）和动态多态（运行阶段），静态多态主要是指函数参数不同产生的多态性，是在编译阶段可以识别的一种多态机制，而运行时多态则主要用于基类指针指向派生类对象时，可以通过基类指针直接调用派生类的对象函数，当然这种多态是通过虚函数实现的。</p>
+<p>虚函数的目的就是通知系统在函数调用时能够自动识别对应的类对象类型，从而能够根据指针所指类型调用对应的类对象，实现函数调用时的多态性。对于析构函数而言，同样适用于上述规则。如果析构函数不是虚函数，那么在调用该函数时（对象被删除时）则只会调用当前对象对应的类的析构函数，这对于直接定义的对象是没有什么影响的，但是对于使用基类指向派生类的指针而言，因为基类指针实际上是基类类型，所以析构时自然只会调用基类的析构函数，这就可能产生内存泄漏（因为派生类的析构函数不被调用）。所以如果确定程序中有基类指针指向派生类的问题，则必须将基类的析构函数指定为虚函数，如此才能确保NEW出来的对象被正确的DELETE。</p>
+<p>以下是几个示例程序，用于方便理解：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClxBase</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    ClxBase() &#123;&#125;;</span><br><span class="line">    ~ClxBase()</span><br><span class="line">     &#123;</span><br><span class="line">     <span class="built_in">cout</span> &lt;&lt; <span class="string">"Output from the destructor of class ClxBase!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">     &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">DoSomething</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Do something in class ClxBase!"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">ClxDerived</span> :</span> <span class="keyword">public</span> ClxBase&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    ClxDerived() &#123;&#125;;</span><br><span class="line">    ~ClxDerived() &#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Output from the destructor of class ClxDerived!"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">DoSomething</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Do something in class ClxDerived!"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>示例程序一：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">    ClxBase base;</span><br><span class="line">    </span><br><span class="line">    ClxDerived derived;</span><br><span class="line">    base.DoSomething();</span><br><span class="line">    </span><br><span class="line">    derived.DoSomething();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<pre><code>Do something in class ClxBase!
+
+Do something in class ClxDerived!
+
+Output from the destructor of class ClxDerived!
+
+Output from the destructor of class ClxBase!
+
+Output from the destructor of class ClxBase!</code></pre><p>分析：</p>
+<p>从以上实例程序可以发现，正常构造的对象，派生类的析构函数会主动调用基类的析构函数，所以不会存在内存泄漏问题。</p>
+<p>示例程序二：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">    ClxDerived *p = <span class="keyword">new</span> ClxDerived;</span><br><span class="line">    p-&gt;DoSomething();</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<pre><code>Do something in class ClxDerived!
+
+Output from the destructor of class ClxDerived!
+
+Output from the destructor of class ClxBase!</code></pre><p>分析：<br>从以上结果可以发现，派生类的指针在析构时，同样是运行指针所对应类型的派生类的析构函数，而此析构函数自然会调用基类的析构函数，所以也不会产生内存泄漏。</p>
+<p>实例程序三：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">   ClxBase *p = <span class="keyword">new</span> ClxDerived;</span><br><span class="line">   p-&gt;DoSomething();</span><br><span class="line">   <span class="keyword">delete</span> p;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<pre><code>Do something in class ClxBase!
+Output from the destructor of class ClxBase!</code></pre><p>分析：</p>
+<p>从以上结果可以发现，基类指针在析构时，会调用基类的析构函数，纵然其指向派生类，但其依然会调用基类的析构，所以派生类中如有需要释放的内存空间，则必然得不到释放，从而产生内存泄漏。</p>
+<p>示例程序四：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClxBase</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    ClxBase() &#123;&#125;;</span><br><span class="line">    <span class="keyword">virtual</span> ~ClxBase() &#123;<span class="built_in">cout</span> &lt;&lt; <span class="string">"Output from the destructor of class ClxBase!"</span> &lt;&lt; <span class="built_in">endl</span>;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">DoSomething</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Do something in class ClxBase!"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">ClxDerived</span> :</span> <span class="keyword">public</span> ClxBase&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    ClxDerived() &#123;&#125;;</span><br><span class="line">    ~ClxDerived() &#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Output from the destructor of class ClxDerived!"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">DoSomething</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Do something in class ClxDerived!"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </span><br><span class="line">    ClxBase *p = <span class="keyword">new</span> ClxDerived;</span><br><span class="line">    p-&gt;DoSomething();</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<pre><code>Do something in class ClxDerived!
+Output from the destructor of class ClxDerived!
+Output from the destructor of class ClxBase!</code></pre><p>分析：</p>
+<p>以上结果可以发现，不管是普通成员函数还是析构函数，只有定义为虚函数，才能够在基类指针指向派生类对象时调用所指向对象的响应函数，从而在函数析构时能够正确的delete掉new出来的对象，不产生内存泄漏。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/08/12/析构函数为虚函数/">
+    <time datetime="2019-08-12T02:27:45.000Z" class="entry-date">
+        2019-08-12
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2019/08/12/关于虚函数与纯虚函数的几点小记/" rel="next">关于虚函数与纯虚函数的几点小记 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/析构函数为虚函数/">析构函数为虚函数</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/关于虚函数与纯虚函数的几点小记/">关于虚函数与纯虚函数的几点小记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/浅谈Python多进程与多线程/">浅谈Python多进程与多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
