@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="浅谈减而治之与分而治之@[toc]
+减而治之线性递归（linear recursion）即减而治之（decrease-and-conquer）的思想：递归每深入一层，待求解问题的规模都缩减一个常数，直至最终蜕化为平凡的小（简单）问题。将一个规模为n的大问题退化为一个规模为n-1的小问题，直至退化为规">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>浅谈减而治之与分而治之 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="浅谈减而治之与分而治之@[toc] 减而治之线性递归（linear recursion）即减而治之（decrease-and-conquer）的思想：递归每深入一层，待求解问题的规模都缩减一个常数，直至最终蜕化为平凡的小（简单）问题。将一个规模为n的大问题退化为一个规模为n-1的小问题，直至退化为规模为1的平凡情况，这种情况称之为递归基（base case of recursion），当达到递归基">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈减而治之与分而治之">
+<meta property="og:url" content="http://yoursite.com/2019/08/12/浅谈减而治之与分而治之/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="浅谈减而治之与分而治之@[toc] 减而治之线性递归（linear recursion）即减而治之（decrease-and-conquer）的思想：递归每深入一层，待求解问题的规模都缩减一个常数，直至最终蜕化为平凡的小（简单）问题。将一个规模为n的大问题退化为一个规模为n-1的小问题，直至退化为规模为1的平凡情况，这种情况称之为递归基（base case of recursion），当达到递归基">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/08/12/浅谈减而治之与分而治之/20190727195323356.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190727195323356.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-08-12T11:09:07.082Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="浅谈减而治之与分而治之">
+<meta name="twitter:description" content="浅谈减而治之与分而治之@[toc] 减而治之线性递归（linear recursion）即减而治之（decrease-and-conquer）的思想：递归每深入一层，待求解问题的规模都缩减一个常数，直至最终蜕化为平凡的小（简单）问题。将一个规模为n的大问题退化为一个规模为n-1的小问题，直至退化为规模为1的平凡情况，这种情况称之为递归基（base case of recursion），当达到递归基">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/12/浅谈减而治之与分而治之/20190727195323356.jpg">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-浅谈减而治之与分而治之" class="post-浅谈减而治之与分而治之 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      浅谈减而治之与分而治之
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2019/08/12/浅谈减而治之与分而治之/" data-id="cjz8aph6u0005zsfymdhtpwsr" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="浅谈减而治之与分而治之"><a href="#浅谈减而治之与分而治之" class="headerlink" title="浅谈减而治之与分而治之"></a>浅谈减而治之与分而治之</h1><p>@[toc]</p>
+<h2 id="减而治之"><a href="#减而治之" class="headerlink" title="减而治之"></a>减而治之</h2><p>线性递归（linear recursion）即减而治之（decrease-and-conquer）的思想：递归每深入一层，待求解问题的规模都缩减一个常数，直至最终蜕化为平凡的小（简单）问题。将一个规模为n的大问题退化为一个规模为n-1的小问题，直至退化为规模为1的平凡情况，这种情况称之为递归基（base case of recursion），当达到递归基时,算法将执行非递归计算。这一方法体现了算法的有穷性。<br>一般这种问题可以分为两个独立的子问题，其一用于单独的一个元素（如：递归出口），其二应用于剩余部分结构与原问题相同。子问题经合并后为原问题的解。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fib</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n==<span class="number">1</span>||n==<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//递归出口</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Fib(n<span class="number">-1</span>)+Fib(n<span class="number">-2</span>);<span class="comment">//把问题分解成Fib(n-1)+Fib(n-2)来递归求解</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;Fib(n)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/08/12/浅谈减而治之与分而治之/20190727195323356.jpg" alt="aratar"></p>
+<h2 id="分而治之"><a href="#分而治之" class="headerlink" title="分而治之"></a>分而治之</h2><p>二分递归（binary recursion）即分而治之（divide-and-conquer）的思想：将其分解为若干规模更小的子问题， 再通过递归机制分别求解。 这种分解持续进行，直到子问题规模缩减至平凡情况。在这种情况下，每一递归实例会调用多个递归来完成，故称作多路递归（multi-way recursion），通常都是将原问题一分为二，故有二分递归。<br>以下代码是对数组求和的二分递归的实现，新算法的思路是：以居中的元素为界将数组一分为二；递归地对子数组分别求和；最后，子数组之和相加即为原数组的总和。</p>
+<p>可以用二路归并来理解<br>下面以vector的二路归并为例</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">void</span> Vector&lt;T&gt;::mergeSort(Rank lo, Rank hi)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (hi-lo&lt;<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mi=(lo+hi)&gt;&gt;<span class="number">2</span>;</span><br><span class="line">    mergeSort(lo, mi);</span><br><span class="line">    mergeSort(mi, hi);</span><br><span class="line">    merge(lo, mi, hi);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">void</span> Vector&lt;T&gt;::merge(Rank lo, Rank mi, Rank hi)</span><br><span class="line">&#123;</span><br><span class="line">    T* A=_elem+lo;</span><br><span class="line">    <span class="keyword">int</span> lb=mi-lo;</span><br><span class="line">    T* B=<span class="keyword">new</span> T[lb];</span><br><span class="line">    <span class="keyword">for</span> (Rank i=<span class="number">0</span>; i&lt;lb; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        B[i]=A[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> lc=hi-mi;</span><br><span class="line">    T* C=_elem+mi;</span><br><span class="line">    <span class="keyword">for</span> (Rank i=<span class="number">0</span>,j=<span class="number">0</span>,k=<span class="number">0</span>; j&lt;lb;i++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ((lc&lt;=k)||(B[j]&lt;=C[k]))</span><br><span class="line">        &#123;</span><br><span class="line">            A[i]=B[j++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ((k&lt;lc)&amp;&amp;(C[k]&lt;B[j]))</span><br><span class="line">        &#123;</span><br><span class="line">            A[i]=C[k++];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> [] B;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>大致内容如图所示：<br><img src="https://img-blog.csdnimg.cn/20190727195323356.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>二路归并的意义在于把一个无序的向量分解成单个有序的元素，然后两两归并排序成为一个有序的向量，所以可以递归。二路归并体现了分而治之的思想。把一个向量一分为二，慢慢的变成单个的元素将问题缩减成很简单的情况。然后排序归并。</p>
+<p>参考链接：<a href="https://juejin.im/post/5b9f8ffae51d450e83776059" target="_blank" rel="noopener">https://juejin.im/post/5b9f8ffae51d450e83776059</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/08/12/浅谈减而治之与分而治之/">
+    <time datetime="2019-08-12T11:05:28.000Z" class="entry-date">
+        2019-08-12
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2019/08/12/C-多重继承的构造与析构的顺序/" rel="next">C++多重继承的构造与析构的顺序 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/浅谈减而治之与分而治之/">浅谈减而治之与分而治之</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/C-多重继承的构造与析构的顺序/">C++多重继承的构造与析构的顺序</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/析构函数为虚函数/">析构函数为虚函数</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/关于虚函数与纯虚函数的几点小记/">关于虚函数与纯虚函数的几点小记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/浅谈Python多进程与多线程/">浅谈Python多进程与多线程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
