@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-15T09:44:49.569Z</updated>
+  <updated>2019-08-16T12:46:08.167Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenCV-Python小白进阶之获取像素点</title>
+    <link href="http://yoursite.com/2019/08/16/OpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E8%8E%B7%E5%8F%96%E5%83%8F%E7%B4%A0%E7%82%B9/"/>
+    <id>http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/</id>
+    <published>2019-08-16T12:34:29.000Z</published>
+    <updated>2019-08-16T12:46:08.167Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OpenCV-Python小白进阶之获取像素点"><a href="#OpenCV-Python小白进阶之获取像素点" class="headerlink" title="OpenCV-Python小白进阶之获取像素点"></a>OpenCV-Python小白进阶之获取像素点</h1><h2 id="灰度图"><a href="#灰度图" class="headerlink" title="灰度图"></a>灰度图</h2><p>因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3> <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> img.shape</span><br><span class="line"><span class="keyword">print</span> img[<span class="number">1</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure><h2 id="彩色图"><a href="#彩色图" class="headerlink" title="彩色图"></a>彩色图</h2><p>因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r</p><h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> img.shape</span><br><span class="line"><span class="keyword">print</span> img[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;OpenCV-Python小白进阶之获取像素点&quot;&gt;&lt;a href=&quot;#OpenCV-Python小白进阶之获取像素点&quot; class=&quot;headerlink&quot; title=&quot;OpenCV-Python小白进阶之获取像素点&quot;&gt;&lt;/a&gt;OpenCV-Python小白进阶
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示</title>
