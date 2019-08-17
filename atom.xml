@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-17T08:52:49.034Z</updated>
+  <updated>2019-08-17T15:02:32.468Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenCv-Python小白进阶之进度条createTrackbar</title>
+    <link href="http://yoursite.com/2019/08/17/OpenCv-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E8%BF%9B%E5%BA%A6%E6%9D%A1createTrackbar/"/>
+    <id>http://yoursite.com/2019/08/17/OpenCv-Python小白进阶之进度条createTrackbar/</id>
+    <published>2019-08-17T09:30:18.000Z</published>
+    <updated>2019-08-17T15:02:32.468Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OpenCv-Python小白进阶之进度条createTrackbar"><a href="#OpenCv-Python小白进阶之进度条createTrackbar" class="headerlink" title="OpenCv-Python小白进阶之进度条createTrackbar"></a>OpenCv-Python小白进阶之进度条createTrackbar</h1><h2 id="createTrackbar"><a href="#createTrackbar" class="headerlink" title="createTrackbar"></a>createTrackbar</h2><p><font color="##FF0000">int createTrackbar(const string&amp; trackbarname, const string&amp;winname, int* value,  int count ，TrackbarCallback onChange = 0,  void* userdata = 0)</font>       </p><p>参数1：轨迹条名字</p><p>参数2：窗口名字</p><p>参数3：滑块初始位置</p><p>参数4：表示滑块达到最大位置的值</p><p>参数5：默认值为0，指向回调函数</p><p>参数6：默认值为0，用户传给回调函数的数据值</p><h2 id="getTrackbar"><a href="#getTrackbar" class="headerlink" title="getTrackbar"></a>getTrackbar</h2><p><font color="#FF0000">int getTrackbarPos(const string&amp; trackbarname, const string&amp; winname)</font></p><p>函数作用：</p><p>获取滑动条的位置的值</p><p>参数1:进度条名称</p><p>参数2:窗口名称</p><p>返回值：进度条位置</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">'a.jpg'</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> img.size</span><br><span class="line"><span class="keyword">print</span> img.dtype</span><br><span class="line"></span><br><span class="line">cv2.namedWindow(<span class="string">'image'</span>, <span class="number">0</span>)</span><br><span class="line">cv2.resizeWindow(<span class="string">'image'</span>, <span class="number">720</span>, <span class="number">480</span>)</span><br><span class="line"></span><br><span class="line">cv2.createTrackbar(<span class="string">'num'</span>,<span class="string">'image'</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="keyword">lambda</span> x: <span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    num = cv2.getTrackbarPos(<span class="string">'num'</span>,<span class="string">'image'</span>)</span><br><span class="line">    ret, thresh1 = cv2.threshold(img, num, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line">    cv2.imshow(<span class="string">'image'</span>, thresh1)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) == <span class="number">27</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure><p><img src="/2019/08/17/OpenCv-Python小白进阶之进度条createTrackbar/t0.png" alt="aratar"></p><p><img src="/2019/08/17/OpenCv-Python小白进阶之进度条createTrackbar/t1.png" alt="aratar"></p><p><img src="/2019/08/17/OpenCv-Python小白进阶之进度条createTrackbar/t2.png" alt="aratar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;OpenCv-Python小白进阶之进度条createTrackbar&quot;&gt;&lt;a href=&quot;#OpenCv-Python小白进阶之进度条createTrackbar&quot; class=&quot;headerlink&quot; title=&quot;OpenCv-Python小白进阶之进度条c
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>OpenCV-Python小白进阶之图像固定阈值二值化处理threshold</title>
