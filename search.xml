@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[OpenCV-Python小白进阶之图像固定阈值二值化处理threshold]]></title>
+    <url>%2F2019%2F08%2F17%2FOpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E5%83%8F%E5%9B%BA%E5%AE%9A%E9%98%88%E5%80%BC%E4%BA%8C%E5%80%BC%E5%8C%96%E5%A4%84%E7%90%86threshold%2F</url>
+    <content type="text"><![CDATA[OpenCV-Python小白进阶之图像固定阈值二值化处理threshold二值化定义：图像的二值化，就是将图像上的像素点的灰度值设置为0或255，也就是将整个图像呈现出明显的只有黑和白的视觉效果。灰度值0：黑，灰度值255：白 一幅图像包括目标物体、背景还有噪声，要想从多值的数字图像中直接提取出目标物体，常用的方法就是设定一个阈值T，用T将图像的数据分成两部分：大于T的像素群和小于T的像素群。这是研究灰度变换的最特殊的方法，称为图像的二值化（Binarization）。 threshold cv2.threshold(img, threshold, maxval,type) 其中： threshold是设定的阈值 maxval是当灰度值大于（或小于）阈值时将该灰度值赋成的值 type规定的是当前二值化的方式 代码实现123456789101112131415161718192021222324# -*- coding:utf-8 -*-import cv2img1 = cv2.imread('opencv.png', cv2.IMREAD_GRAYSCALE)# cv2.THRESH_OTSU 作为图像自适应二值化的一个很优的算法Otsu大津算法的参数ret, binary = cv2.threshold(img1, 175, 255, cv2.THRESH_BINARY)# cv2.THRESH_BINARY 大于阈值的部分被置为255，小于部分被置为0ret, binaryinv = cv2.threshold(img1, 175, 255, cv2.THRESH_BINARY_INV)# cv2.THRESH_BINARY_INV 大于阈值部分被置为0，小于部分被置为255ret, trunc = cv2.threshold(img1, 175, 255, cv2.THRESH_TRUNC)# cv2.THRESH_TRUNC 大于阈值部分被置为threshold，小于部分保持原样ret, tozero = cv2.threshold(img1, 175, 255, cv2.THRESH_TOZERO)# cv2.THRESH_TOZERO 小于阈值部分被置为0，大于部分保持不变ret, tozeroinv = cv2.threshold(img1, 175, 255, cv2.THRESH_TOZERO_INV)# cv2.THRESH_TOZERO_INV 大于阈值部分被置为0，小于部分保持不变while True: cv2.imshow('img1', img1) cv2.imshow('binary', binary) cv2.imshow('binaryinv', binaryinv) cv2.imshow('trunc', trunc) cv2.imshow('tozero', tozero) cv2.imshow('tozeroinv', tozeroinv) if cv2.waitKey(1) == 27: break]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[OpenCV-Python小白进阶之获取像素点]]></title>
     <url>%2F2019%2F08%2F16%2FOpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E8%8E%B7%E5%8F%96%E5%83%8F%E7%B4%A0%E7%82%B9%2F</url>
     <content type="text"><![CDATA[OpenCV-Python小白进阶之获取像素点灰度图因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列 代码实现 12print img.shapeprint img[1][1] 彩色图因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r 代码实现12print img.shapeprint img[1][1][1]]]></content>
