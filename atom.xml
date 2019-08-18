@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-18T08:53:50.772Z</updated>
+  <updated>2019-08-18T10:16:10.075Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenCV-Python小白进阶之图片的融合</title>
+    <link href="http://yoursite.com/2019/08/18/OpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E7%89%87%E7%9A%84%E8%9E%8D%E5%90%88/"/>
+    <id>http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之图片的融合/</id>
+    <published>2019-08-18T08:57:34.000Z</published>
+    <updated>2019-08-18T10:16:10.075Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OpenCV-Python小白进阶之图片的融合"><a href="#OpenCV-Python小白进阶之图片的融合" class="headerlink" title="OpenCV-Python小白进阶之图片的融合"></a>OpenCV-Python小白进阶之图片的融合</h1><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>cv2.resize()</p><blockquote><p><a href="https://wgowi.github.io/2019/08/18/OpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E7%89%87%E7%9A%84%E4%BC%B8%E7%BC%A9%E5%8F%98%E6%8D%A2/#more" target="_blank" rel="noopener">https://wgowi.github.io/2019/08/18/OpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E7%89%87%E7%9A%84%E4%BC%B8%E7%BC%A9%E5%8F%98%E6%8D%A2/#more</a></p></blockquote><p>cv2.addWeighted(img1, x, img2, y, 0)</p><p>把img1与img2按xy的比重融合</p><p>cv2.add(img1,img2)</p><p>将img1与img2按1:1融合</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">img1 = cv2.imread(<span class="string">'a.jpg'</span>)</span><br><span class="line">img2 = cv2.imread(<span class="string">'cv.jpg'</span>)</span><br><span class="line"></span><br><span class="line">img3 = cv2.resize(img1, (<span class="number">400</span>, <span class="number">400</span>))</span><br><span class="line">img4 = cv2.resize(img2, (<span class="number">400</span>, <span class="number">400</span>))</span><br><span class="line"></span><br><span class="line">img5 = cv2.addWeighted(img3, <span class="number">0.5</span>, img4, <span class="number">0.5</span>, <span class="number">0</span>)</span><br><span class="line">img6 = cv2.add(img3,img4)</span><br><span class="line">img7 = cv2.addWeighted(img4, <span class="number">1</span>, img3, <span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">'img5'</span>, img5)</span><br><span class="line">cv2.imshow(<span class="string">'img6'</span>, img6)</span><br><span class="line">cv2.imshow(<span class="string">'img7'</span>, img7)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) == <span class="number">27</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure><p><img src="/2019/08/18/OpenCV-Python小白进阶之图片的融合/t1.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之图片的融合/t2.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之图片的融合/t3.png" alt="aratar"></p><p>由此可知cv2.addweighted()img1和img2的比重都为1时与cv2.add()相同</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;OpenCV-Python小白进阶之图片的融合&quot;&gt;&lt;a href=&quot;#OpenCV-Python小白进阶之图片的融合&quot; class=&quot;headerlink&quot; title=&quot;OpenCV-Python小白进阶之图片的融合&quot;&gt;&lt;/a&gt;OpenCV-Python小白进阶
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>OpenCV-Python小白进阶之图片的伸缩变换</title>

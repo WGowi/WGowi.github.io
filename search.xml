@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[OpenCV-Python小白进阶之图片的融合]]></title>
+    <url>%2F2019%2F08%2F18%2FOpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E7%89%87%E7%9A%84%E8%9E%8D%E5%90%88%2F</url>
+    <content type="text"><![CDATA[OpenCV-Python小白进阶之图片的融合方法cv2.resize() https://wgowi.github.io/2019/08/18/OpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E7%89%87%E7%9A%84%E4%BC%B8%E7%BC%A9%E5%8F%98%E6%8D%A2/#more cv2.addWeighted(img1, x, img2, y, 0) 把img1与img2按xy的比重融合 cv2.add(img1,img2) 将img1与img2按1:1融合 代码实现1234567891011121314151617181920import cv2img1 = cv2.imread('a.jpg')img2 = cv2.imread('cv.jpg')img3 = cv2.resize(img1, (400, 400))img4 = cv2.resize(img2, (400, 400))img5 = cv2.addWeighted(img3, 0.5, img4, 0.5, 0)img6 = cv2.add(img3,img4)img7 = cv2.addWeighted(img4, 1, img3, 1, 0)cv2.imshow('img5', img5)cv2.imshow('img6', img6)cv2.imshow('img7', img7)while True: if cv2.waitKey(1) == 27: breakcv2.destroyAllWindows() 由此可知cv2.addweighted()img1和img2的比重都为1时与cv2.add()相同]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[OpenCV-Python小白进阶之图片的伸缩变换]]></title>
     <url>%2F2019%2F08%2F18%2FOpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E7%89%87%E7%9A%84%E4%BC%B8%E7%BC%A9%E5%8F%98%E6%8D%A2%2F</url>
     <content type="text"><![CDATA[OpenCV-Python小白进阶之图片的伸缩变换方法 cv2.resize(InputArray src, OutputArray dst, Size, fx, fy, interpolation) 参数： InputArray src：输入图片 OutputArray dst：输出图片 Size：输出图片尺寸 fx, fy： 沿x轴，y轴的缩放系数 interpolation： 插入方式 interpolation： 选项所用的插值方法： INTER_NEAREST：最近邻插值 INTER_LINEAR：双线性插值（默认设置） INTER_AREA：使用像素区域关系进行重采样。 INTER_CUBIC：4x4像素邻域的双三次插值 INTER_LANCZOS4：8x8像素邻域的Lanczos插值 代码实现 12345678910111213141516 import cv2img0 = cv2.imread('a.jpg')img1 = cv2.resize(img0, (600, 400), interpolation=cv2.INTER_NEAREST)img2 = cv2.resize(img0, (0,0),fx=0.1, fy=0.1, interpolation=cv2.INTER_NEAREST)img3 = cv2.resize(img2,(0,0),fx=2,fy=2, interpolation=cv2.INTER_NEAREST)cv2.imshow('img0',img0)cv2.imshow('img1',img1)cv2.imshow('img2',img2)cv2.imshow('img3',img3)while (True): if cv2.waitKey(0) == 27: breakcv2.destroyAllWindows()]]></content>
