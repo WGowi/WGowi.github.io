@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-18T07:46:50.920Z</updated>
+  <updated>2019-08-18T08:53:50.772Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenCV-Python小白进阶之图片的伸缩变换</title>
+    <link href="http://yoursite.com/2019/08/18/OpenCV-Python%E5%B0%8F%E7%99%BD%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%BE%E7%89%87%E7%9A%84%E4%BC%B8%E7%BC%A9%E5%8F%98%E6%8D%A2/"/>
+    <id>http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之图片的伸缩变换/</id>
+    <published>2019-08-18T08:17:16.000Z</published>
+    <updated>2019-08-18T08:53:50.772Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="OpenCV-Python小白进阶之图片的伸缩变换"><a href="#OpenCV-Python小白进阶之图片的伸缩变换" class="headerlink" title="OpenCV-Python小白进阶之图片的伸缩变换"></a>OpenCV-Python小白进阶之图片的伸缩变换</h1><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><blockquote><p>cv2.resize(InputArray src, OutputArray dst, Size, fx, fy, interpolation)</p></blockquote><p><font size="5">参数：</font></p><font color="#ff000," size="4">InputArray src：输入图片<p>OutputArray dst：输出图片</p><p>Size：输出图片尺寸</p><p>fx, fy：    沿x轴，y轴的缩放系数<br></p></font><p></p><p><font size="5">interpolation：    插入方式</font></p><font color="#ff000," size="4">interpolation： 选项所用的插值方法：<p>INTER_NEAREST：最近邻插值</p><p>INTER_LINEAR：双线性插值（默认设置）</p><p>INTER_AREA：使用像素区域关系进行重采样。</p><p>INTER_CUBIC：4x4像素邻域的双三次插值</p><p>INTER_LANCZOS4：8x8像素邻域的Lanczos插值<br></p></font><p></p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2> <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">img0 = cv2.imread(<span class="string">'a.jpg'</span>)</span><br><span class="line">img1 = cv2.resize(img0, (<span class="number">600</span>, <span class="number">400</span>), interpolation=cv2.INTER_NEAREST)</span><br><span class="line">img2 = cv2.resize(img0, (<span class="number">0</span>,<span class="number">0</span>),fx=<span class="number">0.1</span>, fy=<span class="number">0.1</span>, interpolation=cv2.INTER_NEAREST)</span><br><span class="line">img3 = cv2.resize(img2,(<span class="number">0</span>,<span class="number">0</span>),fx=<span class="number">2</span>,fy=<span class="number">2</span>, interpolation=cv2.INTER_NEAREST)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">'img0'</span>,img0)</span><br><span class="line">cv2.imshow(<span class="string">'img1'</span>,img1)</span><br><span class="line">cv2.imshow(<span class="string">'img2'</span>,img2)</span><br><span class="line">cv2.imshow(<span class="string">'img3'</span>,img3)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (<span class="literal">True</span>):</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">0</span>) == <span class="number">27</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure><p><img src="/2019/08/18/OpenCV-Python小白进阶之图片的伸缩变换/t0.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之图片的伸缩变换/t1.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之图片的伸缩变换/t2.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之图片的伸缩变换/t3.png" alt="aratar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;OpenCV-Python小白进阶之图片的伸缩变换&quot;&gt;&lt;a href=&quot;#OpenCV-Python小白进阶之图片的伸缩变换&quot; class=&quot;headerlink&quot; title=&quot;OpenCV-Python小白进阶之图片的伸缩变换&quot;&gt;&lt;/a&gt;OpenCV-Pyth
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>OpenCV-Python小白进阶之位运算与掩膜</title>
