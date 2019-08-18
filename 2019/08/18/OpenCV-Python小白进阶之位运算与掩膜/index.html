@@ -80,13 +80,26 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gowi&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta name="description" content="OpenCV-Python小白进阶之位运算与掩膜位运算 由于图片是有一个个0和1组成的，所以OpenCV中对图像也支持为运算（与或非等）  1234dst = cv2.bitwise_and(src1，src2[，dst[，mask]])dst	= cv2.bitwise_not(src[, dst[, mask]])dst	= cv2.bitwise_or(src1, src2[, dst[,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV-Python小白进阶之位运算与掩膜">
+<meta property="og:url" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/index.html">
 <meta property="og:site_name" content="Gowi&#39;s Blog">
+<meta property="og:description" content="OpenCV-Python小白进阶之位运算与掩膜位运算 由于图片是有一个个0和1组成的，所以OpenCV中对图像也支持为运算（与或非等）  1234dst = cv2.bitwise_and(src1，src2[，dst[，mask]])dst	= cv2.bitwise_not(src[, dst[, mask]])dst	= cv2.bitwise_or(src1, src2[, dst[,">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t1.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t2.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t3.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t4.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t5.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t6.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t7.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/cv1.jpg">
+<meta property="og:updated_time" content="2019-08-18T07:46:50.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gowi&#39;s Blog">
+<meta name="twitter:title" content="OpenCV-Python小白进阶之位运算与掩膜">
+<meta name="twitter:description" content="OpenCV-Python小白进阶之位运算与掩膜位运算 由于图片是有一个个0和1组成的，所以OpenCV中对图像也支持为运算（与或非等）  1234dst = cv2.bitwise_and(src1，src2[，dst[，mask]])dst	= cv2.bitwise_not(src[, dst[, mask]])dst	= cv2.bitwise_or(src1, src2[, dst[,">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t1.png">
 
 
 
@@ -116,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/">
 
 
 
 
 
-  <title>归档 | Gowi's Blog</title>
+  <title>OpenCV-Python小白进阶之位运算与掩膜 | Gowi's Blog</title>
   
 
 
@@ -141,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,391 +290,239 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gowi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gowi's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">OpenCV-Python小白进阶之位运算与掩膜</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-18T10:38:56+08:00">
+                2019-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 11 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">OpenCV-Python小白进阶之位运算与掩膜</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  907
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-18T10:38:56+08:00" content="2019-08-18">
-          08-18
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/17/OpenCv-Python小白进阶之进度条createTrackbar/" itemprop="url">
-              
-                <span itemprop="name">OpenCv-Python小白进阶之进度条createTrackbar</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-17T17:30:18+08:00" content="2019-08-17">
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h1 id="OpenCV-Python小白进阶之位运算与掩膜"><a href="#OpenCV-Python小白进阶之位运算与掩膜" class="headerlink" title="OpenCV-Python小白进阶之位运算与掩膜"></a>OpenCV-Python小白进阶之位运算与掩膜</h1><h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p> 由于图片是有一个个0和1组成的，所以OpenCV中对图像也支持为运算（与或非等）</p>
+ <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dst = cv2.bitwise_and(src1，src2[，dst[，mask]])</span><br><span class="line">dst	= cv2.bitwise_not(src[, dst[, mask]])</span><br><span class="line">dst	= cv2.bitwise_or(src1, src2[, dst[, mask]])</span><br><span class="line">dst	= cv2.bitwise_xor(src1, src2[, dst[, mask]])</span><br></pre></td></tr></table></figure>
 
-        
-        
+ <font color="#FF00," size="3">
+ bitwise_and是对二进制数据进行“与”操作，即对图像（灰度图像或彩色图像均可）每个像素值进行二进制“与”操作，1&1=1，1&0=0，0&1=0，0&0=0
 
-        
+<p>bitwise_or是对二进制数据进行“或”操作，即对图像（灰度图像或彩色图像均可）每个像素值进行二进制“或”操作，1|1=1，1|0=0，0|1=0，0|0=0</p>
+<p>bitwise_xor是对二进制数据进行“异或”操作，即对图像（灰度图像或彩色图像均可）每个像素值进行二进制“异或”操作，1^1=0,1^0=1,0^1=1,0^0=0</p>
+<p>bitwise_not是对二进制数据进行“非”操作，即对图像（灰度图像或彩色图像均可）每个像素值进行二进制“非”操作，<del>1=0，</del>0=1<br></p></font><p></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">'cv.jpg'</span>)</span><br><span class="line"><span class="comment"># cv2.imshow('image',img)</span></span><br><span class="line"></span><br><span class="line">rectangle = np.zeros(img.shape[<span class="number">0</span>:<span class="number">2</span>], dtype=<span class="string">'uint8'</span>)</span><br><span class="line">cv2.rectangle(rectangle, (<span class="number">25</span>, <span class="number">25</span>), (<span class="number">275</span>, <span class="number">275</span>), <span class="number">255</span>, <span class="number">-1</span>)</span><br><span class="line">cv2.imshow(<span class="string">'rectangle'</span>, rectangle)</span><br><span class="line"></span><br><span class="line">circle = np.zeros(img.shape[<span class="number">0</span>:<span class="number">2</span>], dtype=<span class="string">'uint8'</span>)</span><br><span class="line">cv2.circle(circle, (<span class="number">150</span>, <span class="number">150</span>), <span class="number">150</span>, <span class="number">255</span>, <span class="number">-1</span>)</span><br><span class="line">cv2.imshow(<span class="string">'circle'</span>, circle)</span><br><span class="line"></span><br><span class="line">bit_and = cv2.bitwise_and(rectangle, circle)</span><br><span class="line">cv2.imshow(<span class="string">'and'</span>, bit_and)</span><br><span class="line"></span><br><span class="line">bit_or = cv2.bitwise_or(rectangle, circle)</span><br><span class="line">cv2.imshow(<span class="string">'or'</span>, bit_or)</span><br><span class="line"></span><br><span class="line">bit_xor = cv2.bitwise_xor(rectangle, circle)</span><br><span class="line">cv2.imshow(<span class="string">'xor'</span>, bit_xor)</span><br><span class="line"></span><br><span class="line">bit_not1 = cv2.bitwise_not(rectangle)</span><br><span class="line">cv2.imshow(<span class="string">'not1'</span>, bit_not1)</span><br><span class="line"></span><br><span class="line">bit_not2 = cv2.bitwise_not(circle)</span><br><span class="line">cv2.imshow(<span class="string">'not2'</span>, bit_not2)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (<span class="literal">True</span>):</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">0</span>)==<span class="number">27</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t1.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t2.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t3.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t4.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t5.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t6.png" alt="aratar"><br><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/t7.png" alt="aratar"></p>
+<h2 id="掩膜"><a href="#掩膜" class="headerlink" title="掩膜"></a>掩膜</h2><p>用选定的图像、图形或物体，对处理的图像（全部或局部）进行遮挡，来控制图像处理的区域或处理过程。用于覆盖的特定图像或物体称为掩模或模板。光学图像处理中,掩模可以是胶片、滤光片等。数字图像处理中,掩模为二维矩阵数组,有时也用多值图像。</p>
+<p>数字图像处理中，图像掩模主要用于：</p>
+<p>①提取感兴趣区,用预先制作的感兴趣区掩模与待处理图像相乘,得到感兴趣区图像,感兴趣区内图像值保持不变,而区外图像值都为0。</p>
+<p>②屏蔽作用,用掩模对图像上某些区域作屏蔽,使其不参加处理或不参加处理参数的计算,或仅对屏蔽区作处理或统计。</p>
+<p>③结构特征提取,用相似性变量或图像匹配方法检测和提取图像中与掩模相似的结构特征。</p>
+<p>④特殊形状图像的制作。<br>掩膜是一种图像滤镜的模板，实用掩膜经常处理的是遥感图像。当提取道路或者河流，或者房屋时，通过一个n*n的矩阵来对图像进行像素过滤，然后将我们需要的地物或者标志突出显示出来。这个矩阵就是一种掩膜。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">cv.namedWindow(<span class="string">'image'</span>, <span class="number">0</span>)</span><br><span class="line">cv.resizeWindow(<span class="string">'image'</span>, <span class="number">720</span>, <span class="number">480</span>)</span><br><span class="line"><span class="comment"># 加载两张图片</span></span><br><span class="line">img1 = cv.imread(<span class="string">'a.jpg'</span>)</span><br><span class="line">img2 = cv.imread(<span class="string">'a.jpeg'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 我想在左上角放置标识，所以我创建了一个ROI</span></span><br><span class="line">rows,cols,channels = img2.shape</span><br><span class="line">roi = img1[<span class="number">0</span>:rows, <span class="number">0</span>:cols ]</span><br><span class="line"><span class="comment"># 现在创建一个徽标掩码并创建其反转掩码</span></span><br><span class="line">img2gray = cv.cvtColor(img2,cv.COLOR_BGR2GRAY)</span><br><span class="line">ret, mask = cv.threshold(img2gray, <span class="number">10</span>, <span class="number">255</span>, cv.THRESH_BINARY)</span><br><span class="line">mask_inv = cv.bitwise_not(mask)</span><br><span class="line"><span class="comment"># 现在使ROI中的徽标区域变黑</span></span><br><span class="line">img1_bg = cv.bitwise_and(roi,roi,mask = mask_inv)</span><br><span class="line"><span class="comment"># 仅从徽标图像中获取徽标区域。</span></span><br><span class="line">img2_fg = cv.bitwise_and(img2,img2,mask = mask)</span><br><span class="line"><span class="comment"># 在ROI中放置徽标并修改主图像</span></span><br><span class="line">dst = cv.add(img1_bg,img2_fg)</span><br><span class="line">img1[<span class="number">0</span>:rows, <span class="number">0</span>:cols ] = dst</span><br><span class="line">cv.imshow(<span class="string">'image'</span>,img1)</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/17/OpenCV-Python小白进阶之图像固定阈值二值化处理threshold/" itemprop="url">
-              
-                <span itemprop="name">OpenCV-Python小白进阶之图像固定阈值二值化处理threshold</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-17T16:41:26+08:00" content="2019-08-17">
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p><img src="/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/cv1.jpg" alt="aratar"></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/16/OpenCV-Python小白进阶之获取像素点/" itemprop="url">
-              
-                <span itemprop="name">OpenCV-Python小白进阶之获取像素点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-16T20:34:29+08:00" content="2019-08-16">
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/15/OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示/" itemprop="url">
-              
-                <span itemprop="name">OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-15T16:29:28+08:00" content="2019-08-15">
-          08-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/12/浅谈减而治之与分而治之/" itemprop="url">
-              
-                <span itemprop="name">浅谈减而治之与分而治之</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T19:05:28+08:00" content="2019-08-12">
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/12/C-多重继承的构造与析构的顺序/" itemprop="url">
-              
-                <span itemprop="name">C++多重继承的构造与析构的顺序</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T10:32:50+08:00" content="2019-08-12">
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/12/析构函数为虚函数/" itemprop="url">
-              
-                <span itemprop="name">析构函数为虚函数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T10:27:45+08:00" content="2019-08-12">
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/12/关于虚函数与纯虚函数的几点小记/" itemprop="url">
-              
-                <span itemprop="name">关于虚函数与纯虚函数的几点小记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T10:21:06+08:00" content="2019-08-12">
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/12/浅谈Python多进程与多线程/" itemprop="url">
-              
-                <span itemprop="name">浅谈Python多进程与多线程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T08:25:35+08:00" content="2019-08-12">
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Gowi 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Gowi 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Gowi
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/" title="OpenCV-Python小白进阶之位运算与掩膜">http://yoursite.com/2019/08/18/OpenCV-Python小白进阶之位运算与掩膜/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/17/OpenCv-Python小白进阶之进度条createTrackbar/" rel="next" title="OpenCv-Python小白进阶之进度条createTrackbar">
+                <i class="fa fa-chevron-left"></i> OpenCv-Python小白进阶之进度条createTrackbar
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -669,6 +530,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -689,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -757,6 +631,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCV-Python小白进阶之位运算与掩膜"><span class="nav-number">1.</span> <span class="nav-text">OpenCV-Python小白进阶之位运算与掩膜</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算"><span class="nav-number">1.1.</span> <span class="nav-text">位运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#掩膜"><span class="nav-number">1.2.</span> <span class="nav-text">掩膜</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -917,6 +807,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
