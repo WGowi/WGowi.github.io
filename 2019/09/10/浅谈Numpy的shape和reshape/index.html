@@ -80,20 +80,17 @@
 
 
 
-<meta name="description" content="OpenCV-Python小白进阶之鼠标事件🖱鼠标️事件 EVENT_MOUSEMOVE 0            #滑动  EVENT_LBUTTONDOWN 1          #左键点击 EVENT_RBUTTONDOWN 2          #右键点击 EVENT_MBUTTONDOWN 3          #中键点击 EVENT_LBUTTONUP 4            #左">
+<meta name="description" content="浅谈Numpy的shape和reshape@[toc] shape 原型：numpy.shape(array)  shape 是 array的一个属性，它能获取矩阵的行列的维度 123456import numpy as nparray1 = np.array([[1,2,3],[4,5,6]])print(array1.shape)array2 = np.array([[2,4],[6,8],[">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCV-Python小白进阶之鼠标事件">
-<meta property="og:url" content="http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/index.html">
+<meta property="og:title" content="浅谈Numpy的shape和reshape">
+<meta property="og:url" content="http://yoursite.com/2019/09/10/浅谈Numpy的shape和reshape/index.html">
 <meta property="og:site_name" content="Gowi&#39;s Blog">
-<meta property="og:description" content="OpenCV-Python小白进阶之鼠标事件🖱鼠标️事件 EVENT_MOUSEMOVE 0            #滑动  EVENT_LBUTTONDOWN 1          #左键点击 EVENT_RBUTTONDOWN 2          #右键点击 EVENT_MBUTTONDOWN 3          #中键点击 EVENT_LBUTTONUP 4            #左">
+<meta property="og:description" content="浅谈Numpy的shape和reshape@[toc] shape 原型：numpy.shape(array)  shape 是 array的一个属性，它能获取矩阵的行列的维度 123456import numpy as nparray1 = np.array([[1,2,3],[4,5,6]])print(array1.shape)array2 = np.array([[2,4],[6,8],[">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/t0.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/t1.png">
-<meta property="og:updated_time" content="2019-09-01T13:14:45.310Z">
+<meta property="og:updated_time" content="2019-09-10T05:04:24.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenCV-Python小白进阶之鼠标事件">
-<meta name="twitter:description" content="OpenCV-Python小白进阶之鼠标事件🖱鼠标️事件 EVENT_MOUSEMOVE 0            #滑动  EVENT_LBUTTONDOWN 1          #左键点击 EVENT_RBUTTONDOWN 2          #右键点击 EVENT_MBUTTONDOWN 3          #中键点击 EVENT_LBUTTONUP 4            #左">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/t0.png">
+<meta name="twitter:title" content="浅谈Numpy的shape和reshape">
+<meta name="twitter:description" content="浅谈Numpy的shape和reshape@[toc] shape 原型：numpy.shape(array)  shape 是 array的一个属性，它能获取矩阵的行列的维度 123456import numpy as nparray1 = np.array([[1,2,3],[4,5,6]])print(array1.shape)array2 = np.array([[2,4],[6,8],[">
 
 
 
@@ -123,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/10/浅谈Numpy的shape和reshape/">
 
 
 
 
 
-  <title>OpenCV-Python小白进阶之鼠标事件 | Gowi's Blog</title>
+  <title>浅谈Numpy的shape和reshape | Gowi's Blog</title>
   
 
 
@@ -298,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/10/浅谈Numpy的shape和reshape/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gowi">
@@ -315,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">OpenCV-Python小白进阶之鼠标事件</h1>
+          <h1 class="post-title" itemprop="name headline">浅谈Numpy的shape和reshape</h1>
         
 
         <div class="post-meta">
@@ -327,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-31T17:26:22+08:00">
-                2019-08-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-10T11:27:57+08:00">
+                2019-09-10
               </time>
             
 
@@ -359,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  281
+                  397
                 </span>
               
 
@@ -396,29 +393,25 @@
       
 
       
-        <h1 id="OpenCV-Python小白进阶之鼠标事件"><a href="#OpenCV-Python小白进阶之鼠标事件" class="headerlink" title="OpenCV-Python小白进阶之鼠标事件"></a>OpenCV-Python小白进阶之鼠标事件</h1><h2 id="🖱鼠标️事件"><a href="#🖱鼠标️事件" class="headerlink" title="🖱鼠标️事件"></a>🖱鼠标️事件</h2><font size="4">
-EVENT_MOUSEMOVE 0            #滑动
-
-<p>EVENT_LBUTTONDOWN 1          #左键点击</p>
-<p>EVENT_RBUTTONDOWN 2          #右键点击</p>
-<p>EVENT_MBUTTONDOWN 3          #中键点击</p>
-<p>EVENT_LBUTTONUP 4            #左键放开</p>
-<p>EVENT_RBUTTONUP 5            #右键放开</p>
-<p>EVENT_MBUTTONUP 6            #中键放开</p>
-<p>EVENT_LBUTTONDBLCLK 7        #左键双击</p>
-<p>EVENT_RBUTTONDBLCLK 8        #右键双击</p>
-<p>EVENT_MBUTTONDBLCLK 9        #中键双击</p>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><blockquote>
-<p>setMouseCallback（winname,onMouse,userdata）</p>
+        <h1 id="浅谈Numpy的shape和reshape"><a href="#浅谈Numpy的shape和reshape" class="headerlink" title="浅谈Numpy的shape和reshape"></a>浅谈Numpy的shape和reshape</h1><p>@[toc]</p>
+<h2 id="shape"><a href="#shape" class="headerlink" title="shape"></a>shape</h2><blockquote>
+<p>原型：numpy.shape(array)</p>
 </blockquote>
-<p>winname 窗口名称</p>
-<p>onMouse 鼠标事件的回调函数。有关如何指定和使用回调的信息</p>
-<p>userdata 传递给回调的可选参数</p>
-</font>
+<p>shape 是 array的一个属性，它能获取矩阵的行列的维度</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">array1 = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line">print(array1.shape)</span><br><span class="line"></span><br><span class="line">array2 = np.array([[<span class="number">2</span>,<span class="number">4</span>],[<span class="number">6</span>,<span class="number">8</span>],[<span class="number">0</span>,<span class="number">12</span>]])</span><br><span class="line">print(np.shape(array2))</span><br></pre></td></tr></table></figure>
 
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">drawing = <span class="literal">False</span>  <span class="comment"># 如果按下鼠标，则为true</span></span><br><span class="line">mode = <span class="literal">True</span>      <span class="comment"># 如果为True，则绘制矩形。按'm'切换到曲线</span></span><br><span class="line">ix = <span class="number">-1</span></span><br><span class="line">iy = <span class="number">-1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw</span><span class="params">(event, x, y, flag, parm)</span>:</span></span><br><span class="line">    <span class="keyword">global</span> ix, iy, drawing, mode</span><br><span class="line">    <span class="keyword">if</span> event == cv2.EVENT_LBUTTONDOWN:</span><br><span class="line">        drawing = <span class="literal">True</span></span><br><span class="line">        ix = x</span><br><span class="line">        iy = y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> event == cv2.EVENT_MOUSEMOVE:</span><br><span class="line">        <span class="keyword">if</span> drawing:</span><br><span class="line">            <span class="keyword">if</span> mode:</span><br><span class="line">                cv2.rectangle(img, (ix, iy), (x, y), (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">-1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cv2.circle(img, (ix, iy), <span class="number">50</span>, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> event == cv2.EVENT_LBUTTONUP:</span><br><span class="line">        drawing = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">if</span> mode:</span><br><span class="line">            cv2.rectangle(img, (ix, iy), (x, y), (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">-1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cv2.circle(img, (ix, iy), <span class="number">50</span>, (<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), <span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">img = np.zeros((<span class="number">512</span>, <span class="number">512</span>, <span class="number">3</span>), np.uint8)</span><br><span class="line">cv2.namedWindow(<span class="string">'image'</span>)</span><br><span class="line">cv2.setMouseCallback(<span class="string">'image'</span>, draw)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    cv2.imshow(<span class="string">'image'</span>, img)</span><br><span class="line">    k = cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xff</span></span><br><span class="line">    <span class="keyword">if</span> k == ord(<span class="string">'m'</span>):</span><br><span class="line">        mode = <span class="keyword">not</span> mode</span><br><span class="line">    <span class="keyword">elif</span> k == <span class="number">27</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">(<span class="number">3</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/08/31/OpenCV-Python小白进阶之鼠标事件/t0.png" alt="aratar"><br><img src="/2019/08/31/OpenCV-Python小白进阶之鼠标事件/t1.png" alt="aratar"></p>
+<h2 id="reshape"><a href="#reshape" class="headerlink" title="reshape"></a>reshape</h2><blockquote>
+<p>原型：numpy.reshape(array,newshape,order=’c’)</p>
+</blockquote>
+<p>array：原矩阵</p>
+<p>newshape：整数值或整数元组。新的形状应该兼容于原始形状。如果是一个整数值，表示一个一维数组的长度；如果是元组，表示新数组的行和列数，一个元素值可以为-1，此时该元素值表示为指定，此时会从数组的长度和剩余的维度中推断出</p>
+<p>order： {‘C’，’F’，’A’}，可选<br>使用此索引顺序读取a的元素，并使用此索引顺序将元素放入reshape d数组中。“C”表示使用类似C的索引顺序读取/写入元素，最后一个轴索引变化最快，返回到第一个轴索引变化最慢。’F’表示使用类似Fortran的索引顺序读/写元素，第一个索引变化最快，最后一个索引变化最慢。请注意，“C”和“F”选项不考虑底层数组的内存布局，只涉及索引的顺序。’A’表示以类似Fortran的索引顺序读取/写入元素，如果a在内存中是Fortran 连续的，否则是C-like顺序。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">array = np.array([[<span class="number">2</span>,<span class="number">4</span>],[<span class="number">6</span>,<span class="number">8</span>],[<span class="number">0</span>,<span class="number">12</span>]])</span><br><span class="line">print(array)</span><br><span class="line">print(array.reshape((<span class="number">2</span>, <span class="number">3</span>)))</span><br><span class="line">print(array)</span><br></pre></td></tr></table></figure>
+
+<p>输出<br> <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> [[ <span class="number">2</span>  <span class="number">4</span>]</span><br><span class="line"> [ <span class="number">6</span>  <span class="number">8</span>]</span><br><span class="line"> [ <span class="number">0</span> <span class="number">12</span>]]</span><br><span class="line">[[ <span class="number">2</span>  <span class="number">4</span>  <span class="number">6</span>]</span><br><span class="line"> [ <span class="number">8</span>  <span class="number">0</span> <span class="number">12</span>]]</span><br><span class="line">[[ <span class="number">2</span>  <span class="number">4</span>]</span><br><span class="line"> [ <span class="number">6</span>  <span class="number">8</span>]</span><br><span class="line"> [ <span class="number">0</span> <span class="number">12</span>]]</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -468,7 +461,7 @@ EVENT_MOUSEMOVE 0            #滑动
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/" title="OpenCV-Python小白进阶之鼠标事件">http://yoursite.com/2019/08/31/OpenCV-Python小白进阶之鼠标事件/</a>
+    <a href="http://yoursite.com/2019/09/10/浅谈Numpy的shape和reshape/" title="浅谈Numpy的shape和reshape">http://yoursite.com/2019/09/10/浅谈Numpy的shape和reshape/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -490,8 +483,8 @@ EVENT_MOUSEMOVE 0            #滑动
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/23/OpenCV-Python小白进阶之简单的绘图操作/" rel="next" title="OpenCV-Python小白进阶之简单的绘图操作">
-                <i class="fa fa-chevron-left"></i> OpenCV-Python小白进阶之简单的绘图操作
+              <a href="/2019/08/31/OpenCV-Python小白进阶之鼠标事件/" rel="next" title="OpenCV-Python小白进阶之鼠标事件">
+                <i class="fa fa-chevron-left"></i> OpenCV-Python小白进阶之鼠标事件
               </a>
             
           </div>
@@ -499,10 +492,6 @@ EVENT_MOUSEMOVE 0            #滑动
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/10/浅谈Numpy的shape和reshape/" rel="prev" title="浅谈Numpy的shape和reshape">
-                浅谈Numpy的shape和reshape <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -641,7 +630,7 @@ EVENT_MOUSEMOVE 0            #滑动
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCV-Python小白进阶之鼠标事件"><span class="nav-number">1.</span> <span class="nav-text">OpenCV-Python小白进阶之鼠标事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#🖱鼠标️事件"><span class="nav-number">1.1.</span> <span class="nav-text">🖱鼠标️事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">1.3.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浅谈Numpy的shape和reshape"><span class="nav-number">1.</span> <span class="nav-text">浅谈Numpy的shape和reshape</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#shape"><span class="nav-number">1.1.</span> <span class="nav-text">shape</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reshape"><span class="nav-number">1.2.</span> <span class="nav-text">reshape</span></a></li></ol></li></ol></div>
             
 
           </div>
