@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="C++多重继承的构造与析构的次序在C++的多重继承中含有虚基类，成员对象时很容易把构造与析构的顺序弄不清楚 下面看一段代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737">
+<meta name="description" content="数字图像处理之仿射变换$$ \left[ \begin{matrix}   1 &amp;amp; 2 &amp;amp; 3 \    4 &amp;amp; 5 &amp;amp; 6 \    7 &amp;amp; 8 &amp;amp; 9  \end{matrix}  \right] \tag{3}$$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++多重继承的构造与析构的顺序">
-<meta property="og:url" content="http://yoursite.com/2019/08/12/C-多重继承的构造与析构的顺序/index.html">
+<meta property="og:title" content="数字图像处理之仿射变换">
+<meta property="og:url" content="http://yoursite.com/2019/09/28/数字图像处理之仿射变换/index.html">
 <meta property="og:site_name" content="Gowi&#39;s Blog">
-<meta property="og:description" content="C++多重继承的构造与析构的次序在C++的多重继承中含有虚基类，成员对象时很容易把构造与析构的顺序弄不清楚 下面看一段代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737">
+<meta property="og:description" content="数字图像处理之仿射变换$$ \left[ \begin{matrix}   1 &amp;amp; 2 &amp;amp; 3 \    4 &amp;amp; 5 &amp;amp; 6 \    7 &amp;amp; 8 &amp;amp; 9  \end{matrix}  \right] \tag{3}$$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-12T02:33:21.550Z">
+<meta property="og:updated_time" content="2019-09-27T17:17:50.608Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++多重继承的构造与析构的顺序">
-<meta name="twitter:description" content="C++多重继承的构造与析构的次序在C++的多重继承中含有虚基类，成员对象时很容易把构造与析构的顺序弄不清楚 下面看一段代码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737">
+<meta name="twitter:title" content="数字图像处理之仿射变换">
+<meta name="twitter:description" content="数字图像处理之仿射变换$$ \left[ \begin{matrix}   1 &amp;amp; 2 &amp;amp; 3 \    4 &amp;amp; 5 &amp;amp; 6 \    7 &amp;amp; 8 &amp;amp; 9  \end{matrix}  \right] \tag{3}$$">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/12/C-多重继承的构造与析构的顺序/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/28/数字图像处理之仿射变换/">
 
 
 
 
 
-  <title>C++多重继承的构造与析构的顺序 | Gowi's Blog</title>
+  <title>数字图像处理之仿射变换 | Gowi's Blog</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/C-多重继承的构造与析构的顺序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/28/数字图像处理之仿射变换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gowi">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++多重继承的构造与析构的顺序</h1>
+          <h1 class="post-title" itemprop="name headline">数字图像处理之仿射变换</h1>
         
 
         <div class="post-meta">
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T10:32:50+08:00">
-                2019-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T01:05:51+08:00">
+                2019-09-28
               </time>
             
 
@@ -356,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  451
+                  34
                 </span>
               
 
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -393,15 +393,9 @@
       
 
       
-        <h1 id="C-多重继承的构造与析构的次序"><a href="#C-多重继承的构造与析构的次序" class="headerlink" title="C++多重继承的构造与析构的次序"></a>C++多重继承的构造与析构的次序</h1><p><strong>在C++的多重继承中含有虚基类，成员对象时很容易把构造与析构的顺序弄不清楚</strong></p>
-<p>下面看一段代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OBJ1</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    OBJ1()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"OBJ1"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~OBJ1()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"~OBJ1"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OBJ2</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    OBJ2()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"OBJ2"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~OBJ2()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"~OBJ2"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base1</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base1()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base1"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Base1()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"~Base1"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base2</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base2()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base2"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Base2()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"~Base2"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base3</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base3()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base3"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Base3()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"~Base3"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base4</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base4()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base4"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Base4()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"~Base4"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span> <span class="keyword">public</span> Base1, <span class="keyword">virtual</span> <span class="keyword">public</span> Base2, <span class="keyword">public</span> Base3, <span class="keyword">virtual</span> <span class="keyword">public</span> Base4</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Derived():Base4(),Base3(),Base2(),Base1(),obj2(),obj1()&#123;&#125;</span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    OBJ1 obj1;</span><br><span class="line">    OBJ2 obj2;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Derived aa;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Base2</span><br><span class="line">Base4</span><br><span class="line">Base1</span><br><span class="line">Base3</span><br><span class="line">OBJ1</span><br><span class="line">OBJ2</span><br><span class="line">~OBJ2</span><br><span class="line">~OBJ1</span><br><span class="line">~Base3</span><br><span class="line">~Base1</span><br><span class="line">~Base4</span><br><span class="line">~Base2</span><br><span class="line">Program ended with exit code: 0</span><br></pre></td></tr></table></figure>
-
-<p>由此可知C++中多重继承的构造顺序是<br>1）虚函数优先构造，其顺序是按那个继承的顺序来的，而不是按初始化列表来的<br>2）然后构造普通的基类，其顺序也是按那个继承的顺序来的，不是按初始化列表来的<br>3）最后构造成员对象<br>4）构造派生类自己的函数体</p>
-<p>由此可知C++中多重继承的析构顺序是<br>1）构造派生类自己的函数体<br>2）析造成员对象<br>3）然后析构普通的基类，其顺序也是按那个继承的顺序来的，也不是按初始化列表来的<br>4）最后是那个虚基类</p>
+        <h1 id="数字图像处理之仿射变换"><a href="#数字图像处理之仿射变换" class="headerlink" title="数字图像处理之仿射变换"></a>数字图像处理之仿射变换</h1><p>$$<br> \left[<br> \begin{matrix}<br>   1 &amp; 2 &amp; 3 \</p>
+<p>   4 &amp; 5 &amp; 6 \</p>
+<p>   7 &amp; 8 &amp; 9<br>  \end{matrix}<br>  \right] \tag{3}<br>$$</p>
 
       
     </div>
@@ -451,7 +445,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/08/12/C-多重继承的构造与析构的顺序/" title="C++多重继承的构造与析构的顺序">http://yoursite.com/2019/08/12/C-多重继承的构造与析构的顺序/</a>
+    <a href="http://yoursite.com/2019/09/28/数字图像处理之仿射变换/" title="数字图像处理之仿射变换">http://yoursite.com/2019/09/28/数字图像处理之仿射变换/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -473,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/12/析构函数为虚函数/" rel="next" title="析构函数为虚函数">
-                <i class="fa fa-chevron-left"></i> 析构函数为虚函数
+              <a href="/2019/09/20/Numpy之random随机数/" rel="next" title="Numpy之random随机数">
+                <i class="fa fa-chevron-left"></i> Numpy之random随机数
               </a>
             
           </div>
@@ -483,8 +477,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/12/浅谈减而治之与分而治之/" rel="prev" title="浅谈减而治之与分而治之">
-                浅谈减而治之与分而治之 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/06/NAO机器人的小记/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -624,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-多重继承的构造与析构的次序"><span class="nav-number">1.</span> <span class="nav-text">C++多重继承的构造与析构的次序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数字图像处理之仿射变换"><span class="nav-number">1.</span> <span class="nav-text">数字图像处理之仿射变换</span></a></li></ol></div>
             
 
           </div>
