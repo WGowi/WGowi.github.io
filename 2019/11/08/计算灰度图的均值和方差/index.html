@@ -80,17 +80,19 @@
 
 
 
-<meta name="description" content="OpenCV-Python小白进阶之获取像素点灰度图因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列 代码实现 12print img.shapeprint img[1][1]  彩色图因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r 代码实现12print img.shapeprin">
+<meta name="description" content="计算灰度图的均值和方差@[toc] 均值图片的灰度均值是各个像素点的灰度值的平均值 代码实现12345678910111213# 计算灰度均值import cv2 as cvimg = cv.imread(&apos;t0.jpg&apos;, 0)height, width = img.shapesize = img.sizeaverage = 0for i in range(height):    for j i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCV-Python小白进阶之获取像素点">
-<meta property="og:url" content="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/index.html">
+<meta property="og:title" content="Gowi&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/2019/11/08/计算灰度图的均值和方差/index.html">
 <meta property="og:site_name" content="Gowi&#39;s Blog">
-<meta property="og:description" content="OpenCV-Python小白进阶之获取像素点灰度图因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列 代码实现 12print img.shapeprint img[1][1]  彩色图因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r 代码实现12print img.shapeprin">
+<meta property="og:description" content="计算灰度图的均值和方差@[toc] 均值图片的灰度均值是各个像素点的灰度值的平均值 代码实现12345678910111213# 计算灰度均值import cv2 as cvimg = cv.imread(&apos;t0.jpg&apos;, 0)height, width = img.shapesize = img.sizeaverage = 0for i in range(height):    for j i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-16T12:46:08.160Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191002232059572.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-11-08T04:58:01.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenCV-Python小白进阶之获取像素点">
-<meta name="twitter:description" content="OpenCV-Python小白进阶之获取像素点灰度图因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列 代码实现 12print img.shapeprint img[1][1]  彩色图因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r 代码实现12print img.shapeprin">
+<meta name="twitter:title" content="Gowi&#39;s Blog">
+<meta name="twitter:description" content="计算灰度图的均值和方差@[toc] 均值图片的灰度均值是各个像素点的灰度值的平均值 代码实现12345678910111213# 计算灰度均值import cv2 as cvimg = cv.imread(&apos;t0.jpg&apos;, 0)height, width = img.shapesize = img.sizeaverage = 0for i in range(height):    for j i">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191002232059572.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/08/计算灰度图的均值和方差/">
 
 
 
 
 
-  <title>OpenCV-Python小白进阶之获取像素点 | Gowi's Blog</title>
+  <title> | Gowi's Blog</title>
   
 
 
@@ -295,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/08/计算灰度图的均值和方差/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gowi">
@@ -312,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">OpenCV-Python小白进阶之获取像素点</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -324,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-16T20:34:29+08:00">
-                2019-08-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-08T12:58:01+08:00">
+                2019-11-08
               </time>
             
 
@@ -356,7 +358,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  120
+                  148
                 </span>
               
 
@@ -393,11 +395,14 @@
       
 
       
-        <h1 id="OpenCV-Python小白进阶之获取像素点"><a href="#OpenCV-Python小白进阶之获取像素点" class="headerlink" title="OpenCV-Python小白进阶之获取像素点"></a>OpenCV-Python小白进阶之获取像素点</h1><h2 id="灰度图"><a href="#灰度图" class="headerlink" title="灰度图"></a>灰度图</h2><p>因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3> <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> img.shape</span><br><span class="line"><span class="keyword">print</span> img[<span class="number">1</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+        <h1 id="计算灰度图的均值和方差"><a href="#计算灰度图的均值和方差" class="headerlink" title="计算灰度图的均值和方差"></a>计算灰度图的均值和方差</h1><p>@[toc]</p>
+<h2 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h2><p>图片的灰度均值是各个像素点的灰度值的平均值</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算灰度均值</span></span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">img = cv.imread(<span class="string">'t0.jpg'</span>, <span class="number">0</span>)</span><br><span class="line">height, width = img.shape</span><br><span class="line">size = img.size</span><br><span class="line"></span><br><span class="line">average = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(height):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(width):</span><br><span class="line">        average += img[i][j]/size</span><br><span class="line"></span><br><span class="line">print(average)</span><br></pre></td></tr></table></figure>
 
-<h2 id="彩色图"><a href="#彩色图" class="headerlink" title="彩色图"></a>彩色图</h2><p>因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r</p>
-<h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> img.shape</span><br><span class="line"><span class="keyword">print</span> img[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><p><img src="https://img-blog.csdnimg.cn/20191002232059572.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算灰度方差</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">img = cv.imread(<span class="string">'t0.jpg'</span>, <span class="number">0</span>)</span><br><span class="line">height, width = img.shape</span><br><span class="line">size = img.size</span><br><span class="line"></span><br><span class="line">p = [<span class="number">0</span>]*<span class="number">256</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(height):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(width):</span><br><span class="line">        p[img[i][j]] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">m = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">256</span>):</span><br><span class="line">    p[i] /= <span class="number">256</span></span><br><span class="line">    m += i*p[i]</span><br><span class="line"></span><br><span class="line">s = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">256</span>):</span><br><span class="line">    s += (i-m)*(i-m)*p[i]</span><br><span class="line"></span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -446,7 +451,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/" title="OpenCV-Python小白进阶之获取像素点">http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/</a>
+    <a href="http://yoursite.com/2019/11/08/计算灰度图的均值和方差/" title>http://yoursite.com/2019/11/08/计算灰度图的均值和方差/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -468,8 +473,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/15/OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示/" rel="next" title="OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示">
-                <i class="fa fa-chevron-left"></i> OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示
+              <a href="/2019/11/08/灰度取反/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -477,10 +482,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/17/OpenCV-Python小白进阶之图像固定阈值二值化处理threshold/" rel="prev" title="OpenCV-Python小白进阶之图像固定阈值二值化处理threshold">
-                OpenCV-Python小白进阶之图像固定阈值二值化处理threshold <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -619,7 +620,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCV-Python小白进阶之获取像素点"><span class="nav-number">1.</span> <span class="nav-text">OpenCV-Python小白进阶之获取像素点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#灰度图"><span class="nav-number">1.1.</span> <span class="nav-text">灰度图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">1.1.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彩色图"><span class="nav-number">1.2.</span> <span class="nav-text">彩色图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算灰度图的均值和方差"><span class="nav-number">1.</span> <span class="nav-text">计算灰度图的均值和方差</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#均值"><span class="nav-number">1.1.</span> <span class="nav-text">均值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">1.1.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方差"><span class="nav-number">1.2.</span> <span class="nav-text">方差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -80,17 +80,22 @@
 
 
 
-<meta name="description" content="OpenCV-Python小白进阶之获取像素点灰度图因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列 代码实现 12print img.shapeprint img[1][1]  彩色图因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r 代码实现12print img.shapeprin">
+<meta name="description" content="图像翻转我们可以利用仿射变换来翻转图片仿射变换参考链接:    https://blog.csdn.net/qq_43309286/article/details/101595206  输入： 图像翻转90度可以直接利用矩阵转置 123456789101112131415161718192021# 图像翻转90度import cv2 as cvimport numpy as npimport ma">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCV-Python小白进阶之获取像素点">
-<meta property="og:url" content="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/index.html">
+<meta property="og:title" content="Gowi&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/2019/11/08/图像翻转/index.html">
 <meta property="og:site_name" content="Gowi&#39;s Blog">
-<meta property="og:description" content="OpenCV-Python小白进阶之获取像素点灰度图因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列 代码实现 12print img.shapeprint img[1][1]  彩色图因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r 代码实现12print img.shapeprin">
+<meta property="og:description" content="图像翻转我们可以利用仿射变换来翻转图片仿射变换参考链接:    https://blog.csdn.net/qq_43309286/article/details/101595206  输入： 图像翻转90度可以直接利用矩阵转置 123456789101112131415161718192021# 图像翻转90度import cv2 as cvimport numpy as npimport ma">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-16T12:46:08.160Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191002233420172.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191002233627248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191002233852766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191002233959542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-11-08T04:57:45.628Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenCV-Python小白进阶之获取像素点">
-<meta name="twitter:description" content="OpenCV-Python小白进阶之获取像素点灰度图因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列 代码实现 12print img.shapeprint img[1][1]  彩色图因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r 代码实现12print img.shapeprin">
+<meta name="twitter:title" content="Gowi&#39;s Blog">
+<meta name="twitter:description" content="图像翻转我们可以利用仿射变换来翻转图片仿射变换参考链接:    https://blog.csdn.net/qq_43309286/article/details/101595206  输入： 图像翻转90度可以直接利用矩阵转置 123456789101112131415161718192021# 图像翻转90度import cv2 as cvimport numpy as npimport ma">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191002233420172.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70">
 
 
 
@@ -120,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/08/图像翻转/">
 
 
 
 
 
-  <title>OpenCV-Python小白进阶之获取像素点 | Gowi's Blog</title>
+  <title> | Gowi's Blog</title>
   
 
 
@@ -295,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/08/图像翻转/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gowi">
@@ -312,7 +317,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">OpenCV-Python小白进阶之获取像素点</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -324,8 +329,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-16T20:34:29+08:00">
-                2019-08-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-08T12:57:45+08:00">
+                2019-11-08
               </time>
             
 
@@ -356,7 +361,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  120
+                  296
                 </span>
               
 
@@ -393,11 +398,22 @@
       
 
       
-        <h1 id="OpenCV-Python小白进阶之获取像素点"><a href="#OpenCV-Python小白进阶之获取像素点" class="headerlink" title="OpenCV-Python小白进阶之获取像素点"></a>OpenCV-Python小白进阶之获取像素点</h1><h2 id="灰度图"><a href="#灰度图" class="headerlink" title="灰度图"></a>灰度图</h2><p>因为灰度图不具有RGB值，所以的img是一个二维数组，第一维表示行，第二维表示列</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3> <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> img.shape</span><br><span class="line"><span class="keyword">print</span> img[<span class="number">1</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+        <h1 id="图像翻转"><a href="#图像翻转" class="headerlink" title="图像翻转"></a>图像翻转</h1><p>我们可以利用仿射变换来翻转图片<br><strong>仿射变换参考链接</strong>:  </p>
+<blockquote>
+<p><a href="https://blog.csdn.net/qq_43309286/article/details/101595206" target="_blank" rel="noopener">https://blog.csdn.net/qq_43309286/article/details/101595206</a></p>
+</blockquote>
+<p>输入：<br><img src="https://img-blog.csdnimg.cn/20191002233420172.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="图像翻转90度"><a href="#图像翻转90度" class="headerlink" title="图像翻转90度"></a>图像翻转90度</h2><p>可以直接利用矩阵转置</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 图像翻转90度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">img0 = cv.imread(<span class="string">'t3.jpg'</span>, <span class="number">0</span>)</span><br><span class="line">img0 = cv.resize(img0, (<span class="number">0</span>, <span class="number">0</span>), fx=<span class="number">0.2</span>, fy=<span class="number">0.2</span>)</span><br><span class="line"></span><br><span class="line">height, width = img0.shape</span><br><span class="line"></span><br><span class="line">img_arr = np.array(img0)</span><br><span class="line"></span><br><span class="line">new_img = np.zeros((height, width), dtype=<span class="string">'uint8'</span>)</span><br><span class="line"></span><br><span class="line">new_img = img_arr.T</span><br><span class="line"></span><br><span class="line">cv.imshow(<span class="string">'new_img'</span>, new_img)</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 
-<h2 id="彩色图"><a href="#彩色图" class="headerlink" title="彩色图"></a>彩色图</h2><p>因为彩色图具有RGB值，所以的img是一个三维数组，第一维表示行，第二维表示列，第三维表示RGB通道,0表示b，1表示g，2表示r</p>
-<h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> img.shape</span><br><span class="line"><span class="keyword">print</span> img[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<p>输出：<br><img src="https://img-blog.csdnimg.cn/20191002233627248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="图片翻转180度"><a href="#图片翻转180度" class="headerlink" title="图片翻转180度"></a>图片翻转180度</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 翻转180度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">img0 = cv.imread(<span class="string">'t3.jpg'</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">height, width = img0.shape</span><br><span class="line"></span><br><span class="line">img_arr = np.array(img0)</span><br><span class="line"></span><br><span class="line">new_img = np.zeros((height, width), dtype=<span class="string">'uint8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(height):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(width):</span><br><span class="line">        new_img[height<span class="number">-1</span>-i][width<span class="number">-1</span>-j] = img0[i][j]</span><br><span class="line"></span><br><span class="line">cv.imshow(<span class="string">'new_img'</span>, new_img)</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<p>输出：<img src="https://img-blog.csdnimg.cn/20191002233852766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="图片倾斜"><a href="#图片倾斜" class="headerlink" title="图片倾斜"></a>图片倾斜</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 图片倾斜</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">img0 = cv.imread(<span class="string">'t3.jpg'</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">height, width = img0.shape</span><br><span class="line"></span><br><span class="line">img_arr = np.array(img0)</span><br><span class="line"></span><br><span class="line">new_img = np.zeros((height+<span class="number">100</span>, width+<span class="number">100</span>), dtype=<span class="string">'uint8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(height):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(width):</span><br><span class="line">        new_img[int(i*np.cos(np.pi/<span class="number">4</span>)-j*np.sin(np.pi/<span class="number">4</span>))][int(i*np.sin(np.pi/<span class="number">4</span>)+j*np.cos(np.pi/<span class="number">4</span>))] = img0[i][j]</span><br><span class="line">        <span class="comment"># new_img[i][2*i+j] = img0[i][j]</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    cv.imshow(<span class="string">'new_img'</span>, new_img)</span><br><span class="line">    <span class="keyword">if</span> (cv.waitKey(<span class="number">1</span>) == <span class="number">27</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：<br><img src="https://img-blog.csdnimg.cn/20191002233959542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMzA5Mjg2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
       
     </div>
     
@@ -446,7 +462,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/" title="OpenCV-Python小白进阶之获取像素点">http://yoursite.com/2019/08/16/OpenCV-Python小白进阶之获取像素点/</a>
+    <a href="http://yoursite.com/2019/11/08/图像翻转/" title>http://yoursite.com/2019/11/08/图像翻转/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -468,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/15/OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示/" rel="next" title="OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示">
-                <i class="fa fa-chevron-left"></i> OpenCV-Python小白进阶之灰度转化、分离RGB与直方图显示
+              <a href="/2019/11/08/数字图像处理关于傅立叶变换的小记/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -478,8 +494,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/17/OpenCV-Python小白进阶之图像固定阈值二值化处理threshold/" rel="prev" title="OpenCV-Python小白进阶之图像固定阈值二值化处理threshold">
-                OpenCV-Python小白进阶之图像固定阈值二值化处理threshold <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/08/灰度取反/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -619,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCV-Python小白进阶之获取像素点"><span class="nav-number">1.</span> <span class="nav-text">OpenCV-Python小白进阶之获取像素点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#灰度图"><span class="nav-number">1.1.</span> <span class="nav-text">灰度图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">1.1.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彩色图"><span class="nav-number">1.2.</span> <span class="nav-text">彩色图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图像翻转"><span class="nav-number">1.</span> <span class="nav-text">图像翻转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#图像翻转90度"><span class="nav-number">1.1.</span> <span class="nav-text">图像翻转90度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片翻转180度"><span class="nav-number">1.2.</span> <span class="nav-text">图片翻转180度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片倾斜"><span class="nav-number">1.3.</span> <span class="nav-text">图片倾斜</span></a></li></ol></li></ol></div>
             
 
           </div>
